@@ -4609,11 +4609,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Универ\\2Семестр\\MyCourseWork\\DALAbstractions\\DALAbstractions.csproj",
+      "projectUniqueName": "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\DALAbstractions\\DALAbstractions.csproj",
       "projectName": "DALAbstractions",
-      "projectPath": "D:\\Универ\\2Семестр\\MyCourseWork\\DALAbstractions\\DALAbstractions.csproj",
+      "projectPath": "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\DALAbstractions\\DALAbstractions.csproj",
       "packagesPath": "C:\\Users\\Edward\\.nuget\\packages\\",
-      "outputPath": "D:\\Универ\\2Семестр\\MyCourseWork\\DALAbstractions\\obj\\",
+      "outputPath": "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\DALAbstractions\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4634,8 +4634,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Универ\\2Семестр\\MyCourseWork\\Core\\Core.csproj": {
-              "projectPath": "D:\\Универ\\2Семестр\\MyCourseWork\\Core\\Core.csproj"
+            "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\Core\\Core.csproj"
             }
           }
         }

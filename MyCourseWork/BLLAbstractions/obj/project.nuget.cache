@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uPqZam/rlZbrvAmJ3gqdadc55PSfV/usYAsfspUkRmHiPXXv6tal56ZcQY3J1mhIfaWWq9a7Y2xKK46kGTTH+w==",
+  "dgSpecHash": "AsrKVX1w+amzWxfXiNIvhTRObLWIqpS111i+0vsBBKei/GfxfJj7LODTa9CPqGlr6bqTCJKk8yd8dxL7G5gJ6Q==",
   "success": true,
-  "projectFilePath": "D:\\Универ\\2Семестр\\MyCourseWork\\BLLAbstractions\\BLLAbstractions.csproj",
+  "projectFilePath": "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\BLLAbstractions\\BLLAbstractions.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edward\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Edward\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

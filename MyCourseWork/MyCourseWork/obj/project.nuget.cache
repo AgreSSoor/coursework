@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hYKs+BgHlCBsGygNuY4Prhsrkzsd1Z0U42dUHN6kyV7ysF0iw7vtPwxFl7/EaBIMakVeooHXGUSft4dqQtWyyw==",
+  "dgSpecHash": "sMFmSXGgPCOfWzQwVsJ7++lbrFvB48bOsS7qqXtXl68iWWd7MAyOCrPE5eLxsYtdszw3tC7lLITKlmFj90rS6Q==",
   "success": true,
-  "projectFilePath": "D:\\Универ\\2Семестр\\MyCourseWork\\MyCourseWork\\MyCourseWork.csproj",
+  "projectFilePath": "C:\\Users\\Edward\\Desktop\\coursework\\MyCourseWork\\MyCourseWork\\MyCourseWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edward\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Edward\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

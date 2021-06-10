@@ -36,7 +36,6 @@
           "BLL": "1.0.0",
           "Core": "1.0.0",
           "DAL": "1.0.0",
-          "EfCore": "1.0.0",
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.5",
           "Microsoft.AspNetCore.Identity.UI": "5.0.5",
@@ -2430,19 +2429,6 @@
         },
         "compile": {
           "DALAbstractions.dll": {}
-        }
-      },
-      "EfCore/1.0.0": {
-        "dependencies": {
-          "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.5",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
-        },
-        "runtime": {
-          "EfCore.dll": {}
-        },
-        "compile": {
-          "EfCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -5341,11 +5327,6 @@
       "sha512": ""
     },
     "DALAbstractions/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "EfCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
