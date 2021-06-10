@@ -1,0 +1,23 @@
+@using MyCourseWork.Models.CartModels
+@model MyCourseWork.Models.CartModels.CartViewModel
+
+@if (@Model == null)
+{
+    <h3>@ViewBag.Message</h3>
+}
+else
+{
+    <div class="container">
+        @foreach (var el in Model.Cart.CartItems)
+        {
+            <div class="alert-warning mt-3">
+                <b>Продукт:</b> @el.Product.Name<br/>
+                <b>Цена:</b> @el.Price.ToString("C")<br/>
+                <b>Количество:</b> @el.Quantity.ToString()<br/>
+                <b><a class="btn btn-danger mt-1" asp-controller="Cart" asp-action="RemoveFromCart" asp-route-Id="@el.Product.Id">Удалить товар</a></b>
+            </div>
+        }
+        <hr/>
+        <a class="btn btn-danger" asp-controller="Order" asp-action="Checkout">Оплатить</a>
+    </div>
+}

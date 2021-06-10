@@ -1,0 +1,57 @@
+﻿@model Core.DbModels.Place
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Подтверждение удаления</h3>
+<div>
+    <h4>Магазин</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Название
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Телефоны
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phones)
+        </dd>
+        <dt class="col-sm-2">
+            Специализация
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Specialisation)
+        </dd>
+        <dt class="col-sm-2">
+            Тип собственности
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OwnerShipType)
+        </dd>
+        <dt class="col-sm-2">
+            Время работы
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkTime)
+        </dd>
+        <dt class="col-sm-2">
+            Ссылка
+        </dt>
+        <dd class="col-sm-10">
+             @Html.DisplayFor(model => model.URL)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Удалить" class="btn btn-danger mr-1 ml-1" /> |
+        <a asp-action="Index" class="btn btn-info mr-1 ml-1">Вернуться обратно</a>
+    </form>
+</div>

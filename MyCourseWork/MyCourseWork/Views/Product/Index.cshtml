@@ -1,0 +1,68 @@
+@model IEnumerable<Core.DbModels.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Товары</h1>
+
+@if (User.IsInRole("admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-success mt-1">Добавить новый продукт</a>
+    </p>
+}
+
+<form asp-controller="Product" asp-action="Sort">
+    <p>
+        <input type="text" name="SearchString" class="py-2 px-2 rounded" />
+        <input type="submit" class="btn btn-dark" value="Поиск" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+             Наименование
+        </th>
+        <th>
+            Цена
+        </th>
+        <th>
+           Описание
+        </th>
+        <th>
+           Магазин
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Place.Name)
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-controller="Cart" asp-action="AddToCart" asp-route-Id="@item.Id">В корзину</a>
+                @if (User.IsInRole("admin"))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info mr-1 ml-1">Изменить</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info mr-1">Детали</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mr-1">Удалить</a>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

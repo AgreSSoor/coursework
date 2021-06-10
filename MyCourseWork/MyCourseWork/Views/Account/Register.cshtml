@@ -1,0 +1,52 @@
+﻿@model Core.AuthModels.RegisterModel
+
+<head>
+  <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+
+<div id="login">
+  <form asp-action="Register" asp-controller="Account" asp-anti-forgery="true">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <fieldset class="clearfix">
+      <span asp-validation-for="Name" class="fontawesome-user"></span>
+      <p>
+        <span class="fontawesome-user"></span>
+        <input type="text" placeholder="Имя" style="width: 280px" onBlur="if(this.placeholder == '') this.placeholder = 'Имя'" onFocus="if(this.placeholder == 'Имя') this.placeholder = ''" asp-for="Name">
+      </p>
+       <span asp-validation-for="Surname" class="fontawesome-user"></span>
+      <p>
+        <span class="fontawesome-user"></span>
+        <input type="text" placeholder="Фамилия" style="width: 280px" onBlur="if(this.placeholder == '') this.placeholder = 'Фамилия'" onFocus="if(this.placeholder == 'Фамилия') this.placeholder = ''" asp-for="Surname">
+      </p>
+
+       <span asp-validation-for="Email" class="fontawesome-user"></span>
+      <p>
+        <span class="fontawesome-user"></span>
+        <input type="text" placeholder="E-mail" style="width: 280px" onBlur="if(this.placeholder == '') this.placeholder = 'E-mail'" onFocus="if(this.placeholder == 'E-mail') this.placeholder = ''" asp-for="Email">
+      </p>
+      
+      <span asp-validation-for="Password" class="fontawesome-user"></span>
+      <p>
+        <span class="fontawesome-user"></span>
+        <input type="password" style="width: 280px" placeholder="Пароль" onBlur="if(this.placeholder == '') this.placeholder = 'Пароль'" onFocus="if(this.placeholder == 'Пароль') this.placeholder = ''" asp-for="Password">
+      </p>
+
+       <span asp-validation-for="ConfirmPassword" class="fontawesome-user"></span>
+      <p>
+        <span class="fontawesome-lock"></span>
+        <input type="password" style="width: 280px" placeholder="Пароль" onBlur="if(this.placeholder == '') this.placeholder = 'Пароль'" onFocus="if(this.placeholder == 'Пароль') this.placeholder = ''" asp-for="ConfirmPassword">
+      </p>
+      <p>
+        <input type="submit" value="ЗАРЕГЕСТРИРОВАТЬСЯ">
+      </p>
+    </fieldset>
+    <p> Уже есть аккаунт? &nbsp;&nbsp;
+      <a asp-action="Login">Войти</a>
+    </p>
+  </form>
+</div>
+
+@section Scripts {
+  <partial name="_ValidationScriptsPartial"/>
+}

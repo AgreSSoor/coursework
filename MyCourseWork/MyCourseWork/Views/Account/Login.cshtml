@@ -1,0 +1,35 @@
+﻿@model Core.AuthModels.LoginModel
+
+
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+
+<div id="login">
+    <form asp-action="Login" method="post" asp-controller="Account" asp-anti-forgery="true">
+        <div asp-validation-summary="ModelOnly"></div>
+        <fieldset class="clearfix">
+            
+            <span asp-validation-for="Email" class="fontawesome-user"></span>
+            <p>
+                <span class="fontawesome-user"></span>
+                <input style="width: 280px" type="text" placeholder="E-mail" onBlur="if(this.value == '') this.placeholder = 'E-mail'" onFocus="if(this.placeholder == 'E-mail') this.placeholder = ''" asp-for="Email">
+            </p>
+
+            <span asp-validation-for="Password" class="fontawesome-user"></span>
+            <p>
+                <span class="fontawesome-lock"></span>
+                <input style="width: 280px" type="password" placeholder="Пароль" onBlur="if(this.placeholder == '') this.placeholder = 'Пароль'" onFocus="if(this.placeholder == 'Пароль') this.placeholder = ''" asp-for="Password">
+            </p>
+            <p>
+                <input type="submit" value="ВОЙТИ">
+            </p>
+        </fieldset>
+        <p> Нет аккаунта? &nbsp;&nbsp;
+            <a asp-action="Register">Регистрация</a>
+        </p>
+    </form>
+</div>
+
+

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Core.DbModels.Place>
+
+@{
+    ViewData["Title"] = "GetAll";
+}
+
+<h1>Магазины</h1>
+@if (User.IsInRole("admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-success mt-1 ">Добавить новый магазин</a>
+    </p>
+}
+
+<form class="justify-content-start mb-2">
+<a asp-controller="Place" asp-action="GetAll" class="btn btn-dark mt-1 mb-1">Сбросить фильтр</a>
+</form>
+
+ <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Название
+                    </th>
+                    <th>
+                        Телефоны
+                    </th>
+                    <th>
+                        Специализация
+                    </th>
+                    <th>
+                       Тип собственности
+                    </th>
+                    <th>
+                        Время работы
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="@item.URL" target="_blank">@Html.DisplayFor(modelItem => item.Name)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialisation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerShipType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkTime)
+            </td>
+            <td>
+                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info mr-1 ml-1">Детали</a>
+
+                @if (User.IsInRole("admin"))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info mr-1">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mr-1">Удалить</a>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
